@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.login');
+})->name('layouts.login');
+Route::get('/signup', function () {
+    return view('layouts.register');
 });
+
+Route::resource('/task', 'TaskController')->middleware(['auth']);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

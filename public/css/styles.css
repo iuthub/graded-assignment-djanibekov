@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/8500f75e5b.js" crossorigin="anonymous"></script>
-
-        <!-- Styles -->
-        <style>
-            /* Include the padding and border in an element's total width and height */
+ /* Include the padding and border in an element's total width and height */
             * {
               box-sizing: border-box;
               font-family: Nunito, san-serif;
@@ -94,7 +80,7 @@
             }
 
             /* Style the "Add" button */
-            .addBtn {
+            .addBtn, .saveBtn {
               padding: 10px;
               width: 25%;
               background: #d9d9d9;
@@ -107,54 +93,39 @@
               border-radius: 0;
               border: none;
             }
-
-            .addBtn:hover {
-              background-color: #bbb;
+            .alert{
+                color: white;
+                font-size: 2em;
             }
-        </style>
-    </head>
-    <body>
-        <form action="">
-            <div id="myDIV" class="header">
-              <h2>My To Do List</h2>
-              <input type="text" name="newTask" placeholder="Title...">
-              <button type="submit" class="addBtn">Add</button>
-            </div>
-        </form>
-        <ul id="myUL">
-          <li>
-            <div class="task">
-                Hit the gym
-            </div>
-            <div class="action">
-                <a href=""><i class="fa fa-edit"></i></a>
-            </div>
-            <div class="action">
-                <a href=""><i class="fa fa-trash-alt"></i></a> 
-            </div>
-          </li>
-          <li>
-            <div class="task">
-               Make some food
-            </div>
-            <div class="action">
-                <a href=""><i class="fa fa-edit"></i></a>
-            </div>
-            <div class="action">
-                <a href=""><i class="fa fa-trash-alt"></i></a> 
-            </div>
-          </li>
-          <li>
-            <div class="task">
-               Finish quiz
-            </div>
-            <div class="action">
-                <a href=""><i class="fa fa-edit"></i></a>
-            </div>
-            <div class="action">
-                <a href=""><i class="fa fa-trash-alt"></i></a> 
-            </div>
-          </li>
-        </ul>
-    </body>
-</html>
+            .saveBtn{
+                background: #2ECC71;
+                color: white;
+            }
+            .addBtn:hover  {
+                background-color: #bbb;
+                
+            }
+            .saveBtn:hover {
+                background-color: #239B56;
+            }
+            .bodyEdit{
+                background-image: url(blueBk.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .button5{
+                display:inline-block;
+                padding:0.46em 1.6em;
+                margin: 1em 0.2em 0.2em 0;
+                text-decoration:none;
+                font-family:'Roboto',sans-serif;
+                font-weight:300;
+                color:#FFFFFF;
+                background-color:#1B4F72;
+                text-align:center;
+                transition: all 0.15s;
+            }
+            .button5:hover{
+                background-color:#5DADE2;
+            }
+           
